@@ -53,17 +53,16 @@ public class UserController
 	public String register(@ModelAttribute("user") User user) 
 	{
 		LOGGER.info("Inside register()" + user);
-		user.setPassword(encoder.encode(user.getPassword()));
-		userRepository.save(user);
-		return "login/login";
-		
 //		Random rand = new Random();
 //		int int_random = rand.nextInt(999);
 //		String newPassWord = user.getPassword()+int_random;
-//		user.setPassword(newPassWord);
 //		emailUtil.sendPassword(user.getEmail(), newPassWord);
-
-
+//		user.setPassword(newPassWord);
+		user.setPassword(encoder.encode(user.getPassword()));
+		userRepository.save(user);
+		
+		
+		return "login/login";
 	} 
 	
 	@RequestMapping("/login")
