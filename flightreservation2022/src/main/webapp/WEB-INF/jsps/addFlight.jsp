@@ -5,8 +5,12 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Add Flight</title>
+<link href="css/custom.css" rel="stylesheet">
 </head>
 <body>
 <h2>Add Flight: </h2>
+<form action="logout" method="post">
+<input type="submit" value="logout"/>
 </body>
+
 </html>

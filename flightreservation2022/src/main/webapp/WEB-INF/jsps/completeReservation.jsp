@@ -8,16 +8,9 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Complete Reservation</title>
+<link href="css/custom.css" rel="stylesheet">
 </head>
 <body>
-<style>
-body {
-  background-image: url('image3.jpg');
-  background-repeat: no-repeat;
-  background-attachment: fixed;  
-  background-size: cover;
-}
-</style>
 <h2>Complete Reservation</h2>
 Airline: ${flight.operatingAirlines}<br/>
 Departure City: ${flight.departureCity}<br/>

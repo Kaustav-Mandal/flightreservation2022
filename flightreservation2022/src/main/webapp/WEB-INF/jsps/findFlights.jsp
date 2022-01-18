@@ -8,16 +8,12 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Find Flights</title>
+<link href="css/custom.css" rel="stylesheet">
 </head>
 <body>
 <body>
 <style>
-body {
-  background-image: url('image4.jpg');
-  background-repeat: no-repeat;
-  background-attachment: fixed;  
-  background-size: cover;
-}
+<link href="css/findflights.css" rel="stylesheet">
 </style>
 <h2>Find Flights:</h2>
 <form action="findFlights" method="post">

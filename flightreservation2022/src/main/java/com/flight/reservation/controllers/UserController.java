@@ -46,7 +46,7 @@ public class UserController
 	@RequestMapping("/registration")
 	public String showRegistration(@ModelAttribute("user") User user)
 	{
-		return "login/registerUser";
+		return "registerUser";
 	}
 	
 	@RequestMapping(value = "/registerUser", method = RequestMethod.POST)
@@ -62,14 +62,14 @@ public class UserController
 		userRepository.save(user);
 		
 		
-		return "login/login";
+		return "login";
 	} 
 	
 	@RequestMapping("/login")
 	public String login()
 	{
 		LOGGER.info("Inside Login Page()");
-		return "login/login";
+		return "login";
 	}
 	
 	@RequestMapping(value = "/login", method = RequestMethod.POST)
@@ -86,12 +86,9 @@ public class UserController
 		} else 
 		{
 			modelMap.addAttribute("msg", "Invalid user name or password .Please try again.");
-			return "login/login";
+			return "login";
 		}
 
-
 	}
-	
-	
 	
 }

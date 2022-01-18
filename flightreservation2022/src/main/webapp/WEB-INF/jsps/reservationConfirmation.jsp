@@ -5,17 +5,12 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Reservation Confirmation</title>
-</head>
+<link href="css/custom.css" rel="stylesheet">
 <body>
-<body>
-<style>
-body {
-  background-image: url('image4.jpg');
-  background-repeat: no-repeat;
-  background-attachment: fixed;  
-  background-size: cover;
-}
-</style>
+
 ${msg}
+
+<form action="logout" method="post">
+<input type="submit" value="logout"/>
 </body>
 </html>

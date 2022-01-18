@@ -5,14 +5,8 @@
 	<head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<title>Register User</title>
+	<link href="css/custom.css" rel="stylesheet">
 	</head>
-	body {
-		  background-image: url('image4.jpg');
-		  background-repeat: no-repeat;
-		  background-attachment: fixed;  
-		  background-size: cover;
-		}	
-	
 	<body>
     <h3>Register Yourself</h3>
     <form action="registerUser" method="post">
