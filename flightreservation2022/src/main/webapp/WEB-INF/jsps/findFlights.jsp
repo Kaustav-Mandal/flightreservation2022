@@ -37,5 +37,11 @@
 <input type="submit" value="search"/>
 
 </form>
+
+<div>
+<form action="logout" method="post">
+<input type="submit" value="logout"/>
+</div>
+
 </body>
 </html>

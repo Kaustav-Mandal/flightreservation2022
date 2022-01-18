@@ -34,5 +34,11 @@ Three Digit Sec Code:<input type="text" name="securityCode"/>
 <input type="submit" value="confirm"/>
 </pre>
 </form>
+
+<div>
+<form action="logout" method="post">
+<input type="submit" value="logout"/>
+</div>
+
 </body>
 </html>

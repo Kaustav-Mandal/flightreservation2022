@@ -23,7 +23,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 	public void configure(HttpSecurity http) throws Exception 
 	{
 		http.csrf().disable().authorizeRequests()
-				.antMatchers("/registration", "/", "/index.html", "/registerUser", "/login", "/login/*", "/reservations/*", "/reservations", "/css/*")
+				.antMatchers("/registration", "/", "/index.html", "/login", "/login/login", "/registerUser","/reservations/*", "/reservations", "/css/*")
 				.permitAll().antMatchers("/admin/addFlight", "/admin/reservationList").hasAnyAuthority("ADMIN").anyRequest().authenticated();
 				
 	}

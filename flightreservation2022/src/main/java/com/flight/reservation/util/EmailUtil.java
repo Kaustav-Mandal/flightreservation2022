@@ -8,6 +8,7 @@ import javax.mail.internet.MimeMessage;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.mail.javamail.MimeMessageHelper;
 import org.springframework.stereotype.Component;
@@ -15,12 +16,17 @@ import org.springframework.stereotype.Component;
 @Component
 public class EmailUtil {
 	
-	private String CheckIn = "http://localhost:9090/flightcheckin/showStartCheckin";
-	private String EMAIL_BODY_ITINERARY = "PFA Itinerary. Use the below link to check In " +"\n" + CheckIn;
-	private String EMAIL_BODY_PASSWORD = "Your Password to login.";
+	@Value("${com.flight.checkin.application}")
+	private String CHECKIN;
+	@Value("${com.flight.checkin.application}")
+	private String EMAIL_BODY_ITINERARY;
+	@Value("${com.flight.checkin.application}")
+	private String EMAIL_BODY_PASSWORD;
 
-	private String EMAIL_SUBJECT_ITINERARY = "Itinerary for your Flight and Check In Link";
-	private String EMAIL_SUBJECT_PASSWORD = "Password For Flight Registration";
+	@Value("${com.flight.reservation.itinerary.email.subject}")
+	private String EMAIL_SUBJECT_ITINERARY;
+	@Value("${com.flight.reservation.password.email.subject}")
+	private String EMAIL_SUBJECT_PASSWORD;
 
 //	private static final Logger LOGGER = LoggerFactory.getLogger(EmailUtil.class);
 	
@@ -36,7 +42,7 @@ public class EmailUtil {
 			MimeMessageHelper messageHelper = new MimeMessageHelper(message, true);
 			messageHelper.setTo(toAddress);
 			messageHelper.setSubject(EMAIL_SUBJECT_ITINERARY);
-			messageHelper.setText(EMAIL_BODY_ITINERARY);
+			messageHelper.setText(EMAIL_BODY_ITINERARY + "\n" + CHECKIN);
 			messageHelper.addAttachment("Itinearary", new File(filePath));
 			sender.send(message);
 		} catch (MessagingException e) {

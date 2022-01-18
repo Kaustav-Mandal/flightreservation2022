@@ -10,7 +10,7 @@
 <link href="css/custom.css" rel="stylesheet">
 </head>
 <body>
-<body>    
+<div>    
     <h2>Login</h2><br>    
     <div class="login">    
     <form id="login" method="post" action="login">    
@@ -25,7 +25,6 @@
         <button type="submit">Login</button>              
     </form>     
 </div>    
-</body> 
 
 ${msg}
 </body>

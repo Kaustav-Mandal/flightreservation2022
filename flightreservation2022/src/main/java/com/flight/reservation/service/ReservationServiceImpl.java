@@ -3,6 +3,7 @@ package com.flight.reservation.service;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -37,6 +38,9 @@ public class ReservationServiceImpl implements ReservationService {
 	
 	private static final Logger LOGGER = LoggerFactory.getLogger(ReservationServiceImpl.class);
 
+	@Value("${com.flight.reservation.itinerary.dirpath}")
+	private String ITINERARY_DIR;
+
 	
 	@Override
 	@Transactional
@@ -64,10 +68,10 @@ public class ReservationServiceImpl implements ReservationService {
 		LOGGER.info("Saving the reservation:" + reservation);
 		Reservation savedReservation = reservationRepository.save(reservation);
 		
-//		String filePath = "G:\\Udemy\\ReservationPDF\\" + savedReservation.getId() + ".pdf";
-//		LOGGER.info("Generating  the itinerary"+filePath);
-//		pdfGenerator.generateItinerary(savedReservation, filePath);
-//		LOGGER.info("Emailing the Itinerary");
+		String filePath = ITINERARY_DIR + savedReservation.getId() + ".pdf";
+		LOGGER.info("Generating  the itinerary"+filePath);
+		pdfGenerator.generateItinerary(savedReservation, filePath);
+		LOGGER.info("Emailing the Itinerary");
 //		emailUtil.sendItinerary(passenger.getEmail(), filePath);
 
 		return savedReservation;
