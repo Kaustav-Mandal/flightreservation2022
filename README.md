@@ -1,5 +1,5 @@
 # Flight Reservation Application
-Flight Reservation Application using Spring Boot, Java, JSTL, CSS, JS. 
+Flight Reservation Application using Spring Boot, Java, JSTL, CSS, JS, MySQL. 
 
 # Project Description
 1. This project is a POC of how to use Spring Boot to build an end to end web application. 
