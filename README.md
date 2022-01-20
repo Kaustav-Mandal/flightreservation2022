@@ -1,14 +1,14 @@
-# Flight Reservation Application
+## Flight Reservation Application
 Flight Reservation Application using Spring Boot, Java, JSTL, CSS, JS, MySQL. 
 
-# Project Description
+## Project Description
 1. This project is a POC of how to use Spring Boot to build an end to end web application. 
 2. This application lets user Register and login to the system to book a flight reservation.
 3. It also has Role based Access Management which lets Admin user to access some secured resources of the application. 
 4. This application exposes REST APIs which can be used by other application. For example check in to a Flight. Refer to this "https://github.com/Kaustav-Mandal/flightrCheckin.git" application which uses the REST API calls to complete checkin process. 
  
 
-# Technologies Used:
+## Technologies Used:
 1. Spring Boot 2.6.2
 2. MySql server and Workbench
 3. Java, HTML, CSS, JS, JSP, JSTL
@@ -16,7 +16,7 @@ Flight Reservation Application using Spring Boot, Java, JSTL, CSS, JS, MySQL.
 5. Maven
 6. Spring Tool Suite IDE. 
 
-# How to use the Project:
+## How to use the Project:
 1. Download the code base and import it to STS. 
 2. Make following changes in the application.properties file. 
       a) update database url and password and log file location. 
@@ -28,7 +28,7 @@ Flight Reservation Application using Spring Boot, Java, JSTL, CSS, JS, MySQL.
 4. create the tables in database using queryies.sql file. 
 5. That's all and it's ready to run on embedded tomcat in Spring Boot. The default url to run the application is : http://localhost:8080/flightreservation/
 
-# Future Scope:
+## Future Scope:
 1. Since Springboot comes with tons of interesting features, the first thing which will be most useful is using actuator from Spring Boot which will allow to minitor
 all the beans.
 2. This application 
