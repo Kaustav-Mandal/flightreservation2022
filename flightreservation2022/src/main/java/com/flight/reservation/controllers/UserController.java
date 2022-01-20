@@ -40,12 +40,14 @@ public class UserController {
 	private static final Logger LOGGER = LoggerFactory.getLogger(UserController.class);
 
 	@RequestMapping("/registration")
-	public String showRegistration(@ModelAttribute("user") User user) {
+	public String showRegistration(@ModelAttribute("user") User user) 
+	{
 		return "registerUser";
 	}
 
 	@RequestMapping(value = "/registerUser", method = RequestMethod.POST)
-	public String register(@ModelAttribute("user") User user) {
+	public String register(@ModelAttribute("user") User user) 
+	{
 		LOGGER.info("Inside register()" + user);
 //		Random rand = new Random();
 //		int int_random = rand.nextInt(999);
@@ -59,14 +61,16 @@ public class UserController {
 	}
 
 	@RequestMapping("/login")
-	public String login() {
+	public String login() 
+	{
 		LOGGER.info("Inside Login Page()");
 		return "login";
 	}
 
 	@RequestMapping(value = "/login", method = RequestMethod.POST)
 	public String login(@RequestParam("email") String email, @RequestParam("password") String password,
-			ModelMap modelMap) {
+			ModelMap modelMap) 
+	{
 		boolean loginResponse = securityService.login(email, password);
 		LOGGER.info("Inside login() and the email is: " + email);
 		if (loginResponse) 
