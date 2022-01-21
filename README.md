@@ -31,6 +31,6 @@ Flight Reservation Application using Spring Boot, Java, JSTL, CSS, JS, MySQL.
 ## Future Scope:
 1. Since Springboot comes with tons of interesting features, the first thing which will be most useful is using actuator from Spring Boot which will allow to minitor
 all the beans.
-2. This application 
+
 
 
