@@ -2,7 +2,7 @@
 Flight Reservation Application using Spring Boot, Java, JSTL, CSS, JS, MySQL. 
 
 ## Project Description
-1. This project is a POC of how to use Spring Boot to build an end to end web application. 
+1. This project is a capstone project of how to use Spring Boot to build an end to end web application. 
 2. This application lets user Register and login to the system to book a flight reservation.
 3. It also has Role based Access Management which lets Admin user to access some secured resources of the application. 
 4. This application exposes REST APIs which can be used by other application. For example check in to a Flight. Refer to this "https://github.com/Kaustav-Mandal/flightrCheckin.git" application which uses the REST API calls to complete checkin process. 
