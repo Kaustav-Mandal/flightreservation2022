@@ -27,6 +27,7 @@ Flight Reservation Application using Spring Boot, Java, JSTL, CSS, JS, MySQL.
 3. Do a maven update in case there is some Jar related issues. 
 4. create the tables in database using queryies.sql file. 
 5. That's all and it's ready to run on embedded tomcat in Spring Boot. The default url to run the application is : http://localhost:8080/flightreservation/
+6. The port number and default application url can be changed in application.properties file.
 
 ## Future Scope:
 1. Since Springboot comes with tons of interesting features, the first thing which will be most useful is using actuator from Spring Boot which will allow to minitor
